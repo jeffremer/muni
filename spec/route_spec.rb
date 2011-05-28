@@ -2,11 +2,11 @@ require 'muni/base'
 require 'muni/route'
 
 describe "Muni::Route" do
-  pending "fetches all available routes" do
-    # TODO
+  it "fetches all available routes" do   
+    Muni::Route.find(:all)
   end
   
-  pending "fetches routes by tag" do
-    # TODO    
+  it "fetches routes by tag" do
+    Muni::Route.find(21)
   end
 end
