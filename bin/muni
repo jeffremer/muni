@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+# -*- mode: ruby -*-
+
+require 'muni'
+require 'thor'
+
+class MUNI < Thor
+  desc "list", "Lists all routes"
+  def list
+    Muni::Route.find(:all).each do |route|
+      say_status route.tag, route.title, :green
+    end
+  end
+  
+  desc "show [TAG]", "Shows a specifc route by name"
+  def show(tag)
+    route = Muni::Route.find(tag)
+    say_status route.tag, route.title, :green
+    route.directions.each do |direction|
+      say_status direction.id, direction.name, :yellow
+    end
+  end
+end
+
+MUNI.start

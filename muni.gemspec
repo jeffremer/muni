@@ -20,6 +20,9 @@ Gem::Specification.new do |s|
 
   s.add_dependency "mash"
   s.add_dependency "xml-simple"
-  s.add_dependency "actionpack" 
+  s.add_dependency "actionpack"
+  # For the executable
+  s.add_dependency "thor"   
+  
   s.add_development_dependency "rspec", "~> 2.0.0.beta.22"
 end
