@@ -2,12 +2,13 @@ require 'mash'
 module Muni
   class Base < Mash
     class << self
-      def find(id)
-                
-      end
-      
-      
       private
+        def fetch(command, options = nil)
+          url = build_url(command, options)
+          xml = Net::HTTP.get(URI.parse(url))
+          XmlSimple.xml_in(xml)          
+        end
+      
         def build_url(command, options = nil)
           url = "http://webservices.nextbus.com/service/publicXMLFeed?command=%s&a=sf-muni" %  command
           if options

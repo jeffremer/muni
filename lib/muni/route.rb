@@ -1,8 +1,9 @@
-require 'rexml/document'
 require 'net/http'
+require 'xmlsimple'
+
+require 'muni/stop'
 
 module Muni
-  class Stop < Base; end
   class Direction < Base; end
   class Route < Base
     class << self
@@ -10,67 +11,52 @@ module Muni
         if tag == :all
           find_all
         else
-
           find_by_tag(tag)               
         end
       end
       
       private
         def find_all
-          url = build_url(:routeList)
-          xml = Net::HTTP.get(URI.parse(url))
-          document = REXML::Document.new(xml)
-          routes = []
-          document.elements.each('body/route') do |el|
-            routes << Route.new({
-              :tag => el.attributes['tag'],
-              :title => el.attributes['title'],
-            })
+          document = fetch(:routeList)
+          document['route'].collect do |el|
+            Route.new(el)
           end
-          routes
         end
         
         def find_by_tag(tag)
-          url = build_url(:routeConfig, {:r => tag})
-          xml = Net::HTTP.get(URI.parse(url))
-          document = REXML::Document.new(xml)
-          
-          route = Route.new()
-          
-          document.elements.each('body/route') do |el|           
-            route.tag = el.attributes['tag']
-            route.title = el.attributes['title']
-          end
+          document = fetch(:routeConfig, {:r => tag})
+          route = Route.new({:tag => document['route'].first['tag'], :title => document['route'].first['title']})
           
           stops = {}
           
-          document.elements.each('body/route/stop') do |stop|
+          document['route'].first['stop'].each do |stop|
             st = Stop.new({
-              :tag => stop.attributes['tag'],
-              :title => stop.attributes['title'],
-              :lat => stop.attributes['lat'],
-              :lon => stop.attributes['lat'],
-              :stopId => stop.attributes['lat'],                            
+              :tag => stop['tag'],
+              :title => stop['title'],
+              :lat => stop['lat'],
+              :lon => stop['lat'],
+              :stopId => stop['lat'],                            
             })
             stops[st[:tag]] = st
           end
           
-          route.stops = stops
-          
           directions = []
-          document.elements.each('body/route/direction') do |direction|
-            direction_stops = {}
-            direction.elements.each('stop') do |stop|
-              direction_stops[stop.attributes['tag']] = stops[stop.attributes['tag']]
+          route.directions = document['route'].first['direction'].collect do |direction|
+            direction_stops = direction['stop'].collect do |stop|
+              stops[stop['tag']]
+            end
+            
+            direction_stops.each do |stop|
+              stop.route_tag = route.tag
+              stop.direction = direction['tag']
             end
 
-            directions << Direction.new({
-                :id => direction.attributes['tag'],
-                :name => direction.attributes['title'],
+            Direction.new({
+                :id => direction['tag'],
+                :name => direction['title'],
                 :stops => direction_stops
             })
           end
-          route.directions = directions
           
           route
         end
