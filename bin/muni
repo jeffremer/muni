@@ -36,16 +36,25 @@ class MUNI < Thor
   
   desc "predict [ROUTE] [DIRECTION] [STOP]", "Retrieve predictions for a route at a specific stop"
   def predict(route, direction, *stop)
+    # Join the remaining arguments so that predict can be called without
+    # having to quote the stop name.
     stop = stop.join(' ')
     
+    # Get the bus route information
+    # TODO Only do this if necessary
     bus = Muni::Route.find(route)
 
+    # Look up the stop information unless a numerica stop tag is specified
     stop = bus.send(direction.downcase.to_sym).stop_at(stop).tag unless stop =~ /[1-9][0-9]+/
     
+    # Look up the direction information if using "inbound" or "outbound" instead
+    # of a direction tag.
     direction = bus.send(direction.downcase.to_sym).id if direction =~ /(inbound|outbound)/i      
-        
+
+    # Create the stop object from the route, direction, and tag.
     stop = Muni::Stop.new({:route_tag => route, :direction => direction, :tag => stop})
-    
+
+    # Retrieve the predictions
     begin
       print_table stop.predictions.collect{|time| [time.vehicle, time.pretty_time]}, {:ident => 8}
     rescue Muni::NextBusError => e
