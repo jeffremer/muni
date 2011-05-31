@@ -40,7 +40,7 @@ class MUNI < Thor
     
     bus = Muni::Route.find(route)
 
-    bus.send(direction.downcase.to_sym).stop_at(stop).tag unless stop =~ /[1-9][0-9]+/
+    stop = bus.send(direction.downcase.to_sym).stop_at(stop).tag unless stop =~ /[1-9][0-9]+/
     
     direction = bus.send(direction.downcase.to_sym).id if direction =~ /(inbound|outbound)/i      
         
