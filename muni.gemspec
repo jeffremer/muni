@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.version     = Muni::VERSION
   s.authors     = ["Jeff Remer"]
   s.email       = ["jeff@threestarchina.com"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.homepage    = "http://jeffremer.com/muni"
+  s.summary     = %q{TODO: NextBus San Francisco Muni API Client}
+  s.description = %q{TODO: A simple NextBus API client for retrieving San Francisco Muni bus route and stop prediction information}
 
   s.rubyforge_project = "muni"
 
