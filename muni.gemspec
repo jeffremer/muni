@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Jeff Remer"]
   s.email       = ["jeff@threestarchina.com"]
   s.homepage    = "http://jeffremer.com/muni"
-  s.summary     = %q{TODO: NextBus San Francisco Muni API Client}
-  s.description = %q{TODO: A simple NextBus API client for retrieving San Francisco Muni bus route and stop prediction information}
+  s.summary     = %q{NextBus San Francisco Muni API Client}
+  s.description = %q{A simple NextBus API client for retrieving San Francisco Muni bus route and stop prediction information}
 
   s.rubyforge_project = "muni"
 
