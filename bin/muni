@@ -7,19 +7,52 @@ require 'thor'
 class MUNI < Thor
   desc "list", "Lists all routes"
   def list
-    Muni::Route.find(:all).each do |route|
-      say_status route.tag, route.title, :green
-    end
+    begin
+      Muni::Route.find(:all).each do |route|
+        say_status route.tag, route.title, :green
+      end
+    rescue Muni::NextBusError => e
+      say_status "ERROR", e.message, :red
+    end    
   end
   
-  desc "show [TAG]", "Shows a specifc route by name"
-  def show(tag)
-    route = Muni::Route.find(tag)
-    say_status route.tag, route.title, :green
-    route.directions.each do |direction|
-      say_status direction.id, direction.name, :yellow
+  desc "show [ROUTE_TAG] [DIRECTION]", "Shows a specifc route by name"
+  method_options %w( verbose -v ) => :boolean
+  def show(tag, direction = nil)
+    begin
+      route = Muni::Route.find(tag)
+      say_status route.tag, route.title, :green
+      dirs = direction ? [route.send(direction.downcase.to_sym)] : route.directions
+      dirs.each do |direction|
+        say_status direction.id, direction.name, :yellow
+        if options.verbose            
+          print_table direction.stops.collect{|stop| [stop.tag, stop.title]}, {:ident => 8}
+        end
+      end
+    rescue Muni::NextBusError => e
+      say_status "ERROR", e.message, :red
+    end      
+  end
+  
+  desc "predict [ROUTE] [DIRECTION] [STOP]", "Retrieve predictions for a route at a specific stop"
+  def predict(route, direction, *stop)
+    stop = stop.join(' ')
+    
+    bus = Muni::Route.find(route)
+
+    bus.send(direction.downcase.to_sym).stop_at(stop).tag unless stop =~ /[1-9][0-9]+/
+    
+    direction = bus.send(direction.downcase.to_sym).id if direction =~ /(inbound|outbound)/i      
+        
+    stop = Muni::Stop.new({:route_tag => route, :direction => direction, :tag => stop})
+    
+    begin
+      print_table stop.predictions.collect{|time| [time.vehicle, time.pretty_time]}, {:ident => 8}
+    rescue Muni::NextBusError => e
+      say_status "ERROR", e.message, :red
     end
   end
+
 end
 
 MUNI.start

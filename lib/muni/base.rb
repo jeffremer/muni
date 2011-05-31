@@ -1,12 +1,15 @@
 require 'mash'
 module Muni
+  class NextBusError < StandardError; end
   class Base < Mash
     class << self
       private
         def fetch(command, options = nil)
           url = build_url(command, options)
           xml = Net::HTTP.get(URI.parse(url))
-          XmlSimple.xml_in(xml)          
+          doc = XmlSimple.xml_in(xml)
+          fail NextBusError, doc['Error'].first['content'].gsub(/\n/,'') if doc['Error']
+          doc
         end
       
         def build_url(command, options = nil)

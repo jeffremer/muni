@@ -2,10 +2,18 @@ require 'net/http'
 require 'xmlsimple'
 
 require 'muni/stop'
+require 'muni/direction'
 
 module Muni
-  class Direction < Base; end
   class Route < Base
+    def outbound
+      directions.select{|dir| dir.name =~ /outbound/i}.first
+    end
+
+    def inbound
+      directions.select{|dir| dir.name =~ /inbound/i}.first
+    end
+
     class << self
       def find(tag)
         if tag == :all
