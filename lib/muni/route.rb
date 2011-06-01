@@ -6,6 +6,11 @@ require 'muni/direction'
 
 module Muni
   class Route < Base
+    def direction_at(direction)
+      return send(direction.downcase.to_sym) if direction =~ /(outbound|inbound)/i
+      directions.select{|dir| dir.id == direction}.first
+    end
+    
     def outbound
       directions.select{|dir| dir.name =~ /outbound/i}.first
     end
