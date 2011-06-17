@@ -4,6 +4,13 @@ About
 `muni` is a simple NextBus API Client library and command line tool for retrieving 
 San Francisco Muni bus route and stop prediction information.
 
+Install
+=======
+
+```bash
+$ gem install muni
+```
+
 Client Library
 ===============
 
