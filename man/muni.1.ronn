@@ -7,8 +7,8 @@ muni(1) -- show san francisco muni routes and stop predictions
 `muni` `list`<br/>
 `muni` `predict` <route> <direction> <stop><br/>
 `muni` `show` `-v`|`--verbose` <route> [<direction>]<br/>
-	
-## DESCRIPTION	
+
+## DESCRIPTION
 
 **muni** retrieves San Francisco MUNI routes information and bus stop prediction
 times. `muni` is mostly an exercise in implementing the core functions of the `muni`
@@ -25,7 +25,7 @@ List all available routes:
 	    L  L-Taraval
 	    M  M-Ocean View
 		....
-		
+
 Show basic route information:
 
 	$ muni show 21
@@ -45,7 +45,7 @@ Show a route and all stops using `-v` or `--verbose`:
        6501  Steuart St & Market St
        5669  Market St & Drumm St
 	   ...
-	
+
 Show a route and all stops for a particular direction:
 
 	$ muni show 21 outbound --verbose
@@ -59,7 +59,7 @@ Show a route and all stops for a particular direction:
 Get predictions for a bus, going a certain direction, at a given stop.
 `predict` can take the formal tag names for the direction and stop, or
 it will perform it's best guess.
-    
+
 With formal direction and stop tags:
 
 	$ muni predict 21 21_OB4 5008
@@ -71,7 +71,7 @@ With formal direction and stop tags:
 	        2823  about 1 hour
 
 With a fuzzy stop name:
-	
+
 	$ muni predict 21 21_OB4 hayes and shrader
 	Route 21-Hayes going Outbound to Fulton St & Shrader St at Hayes St & Shrader St:
 	        2831  2 minutes
@@ -81,15 +81,14 @@ With a fuzzy stop name:
 	        2823  about 1 hour
 
 With a fuzzy direction and stop name:
-	
-	$ muni predict 21 inbound hayes and shrader	
+
+	$ muni predict 21 inbound hayes and shrader
 	Route 21-Hayes going Inbound to Steuart Terminal at Hayes St & Shrader St:
 	        8102  less than a minute
 	        2832  2 minutes
 	        2831  22 minutes
 	        8189  32 minutes
 	        2842  about 1 hour
-		
-	
-		
-	
+
+
+

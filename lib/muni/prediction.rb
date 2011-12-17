@@ -6,7 +6,7 @@ module Muni
     def time
       Time.at((epochTime.to_i / 1000.0).to_i)
     end
-    
+
     def pretty_time
       if time > Time.now
         distance_of_time_in_words_to_now(time)
