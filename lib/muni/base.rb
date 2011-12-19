@@ -11,7 +11,7 @@ module Muni
           fail NextBusError, doc['Error'].first['content'].gsub(/\n/,'') if doc['Error']
           doc
         end
-      
+
         def build_url(command, options = nil)
           url = "http://webservices.nextbus.com/service/publicXMLFeed?command=%s&a=sf-muni" %  command
           if options
@@ -21,7 +21,7 @@ module Muni
           end
           url
         end
-        
+
     end
   end
 end

@@ -10,7 +10,7 @@ module Muni
       return send(direction.downcase.to_sym) if direction =~ /(outbound|inbound)/i
       directions.select{|dir| dir.id == direction}.first
     end
-    
+
     def outbound
       directions.select{|dir| dir.name =~ /outbound/i}.first
     end
@@ -24,10 +24,10 @@ module Muni
         if tag == :all
           find_all
         else
-          find_by_tag(tag)               
+          find_by_tag(tag)
         end
       end
-      
+
       private
         def find_all
           document = fetch(:routeList)
@@ -35,30 +35,30 @@ module Muni
             Route.new(el)
           end
         end
-        
+
         def find_by_tag(tag)
           document = fetch(:routeConfig, {:r => tag})
           route = Route.new({:tag => document['route'].first['tag'], :title => document['route'].first['title']})
-          
+
           stops = {}
-          
+
           document['route'].first['stop'].each do |stop|
             st = Stop.new({
               :tag => stop['tag'],
               :title => stop['title'],
               :lat => stop['lat'],
               :lon => stop['lat'],
-              :stopId => stop['lat'],                            
+              :stopId => stop['lat'],
             })
             stops[st[:tag]] = st
           end
-          
+
           directions = []
           route.directions = document['route'].first['direction'].collect do |direction|
             direction_stops = direction['stop'].collect do |stop|
               stops[stop['tag']]
             end
-            
+
             direction_stops.each do |stop|
               stop.route_tag = route.tag
               stop.direction = direction['tag']
@@ -70,7 +70,7 @@ module Muni
                 :stops => direction_stops
             })
           end
-          
+
           route
         end
     end
