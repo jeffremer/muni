@@ -1,7 +1,8 @@
-require 'mash'
+require "ostruct"
+
 module Muni
   class NextBusError < StandardError; end
-  class Base < Mash
+  class Base < OpenStruct
     class << self
       private
 

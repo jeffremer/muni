@@ -1,4 +1,4 @@
-require 'amatch'
+require "amatch"
 
 module Muni
   class Direction < Base
