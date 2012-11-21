@@ -4,23 +4,20 @@ module Muni
   class Base < Mash
     class << self
       private
-        def fetch(command, options = nil)
-          url = build_url(command, options)
-          xml = Net::HTTP.get(URI.parse(url))
-          doc = XmlSimple.xml_in(xml)
-          fail NextBusError, doc['Error'].first['content'].gsub(/\n/,'') if doc['Error']
-          doc
-        end
 
-        def build_url(command, options = nil)
-          url = "http://webservices.nextbus.com/service/publicXMLFeed?command=%s&a=sf-muni" %  command
-          if options
-            options.each { |key,value|
-              url << "&#{key}=#{value}"
-            }
-          end
-          url
-        end
+      def fetch(command, options = {})
+        url = build_url(command, options)
+        xml = Net::HTTP.get(URI.parse(url))
+        doc = XmlSimple.xml_in(xml) || {}
+        fail NextBusError, doc['Error'].first['content'].gsub(/\n/,'') if doc['Error']
+        doc
+      end
+
+      def build_url(command, options = {})
+        url = "http://webservices.nextbus.com/service/publicXMLFeed?command=#{command}&a=sf-muni"
+        options.each { |key,value| url << "&#{key}=#{value}" }
+        url
+      end
 
     end
   end
