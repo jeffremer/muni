@@ -12,11 +12,11 @@ module Muni
     end
 
     def outbound
-      directions.select{|dir| dir.name =~ /outbound/i}.first
+      directions.select{ |dir| dir.name =~ /outbound/i }.first
     end
 
     def inbound
-      directions.select{|dir| dir.name =~ /inbound/i}.first
+      directions.select{ |dir| dir.name =~ /inbound/i }.first
     end
 
     class << self
