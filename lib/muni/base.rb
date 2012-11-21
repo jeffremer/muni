@@ -1,7 +1,6 @@
-require 'mash'
 module Muni
   class NextBusError < StandardError; end
-  class Base < Mash
+  class Base < OpenStruct
     class << self
       private
         def fetch(command, options = nil)

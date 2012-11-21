@@ -50,7 +50,7 @@ module Muni
               :lon => stop['lat'],
               :stopId => stop['lat'],
             })
-            stops[st[:tag]] = st
+            stops[st.tag] = st
           end
 
           directions = []
