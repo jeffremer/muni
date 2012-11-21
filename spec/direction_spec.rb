@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Muni::Direction do
-  use_vcr_cassette
+  use_vcr_cassette "Muni_Route"
 
   let(:route) { Muni::Route.find(21) }
 
