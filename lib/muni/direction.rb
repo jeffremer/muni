@@ -1,5 +1,3 @@
-require 'amatch'
-
 module Muni
   class Direction < Base
     def stop_at(place)
