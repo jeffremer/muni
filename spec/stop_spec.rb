@@ -11,4 +11,14 @@ describe "Muni::Stop" do
       p time.pretty_time
     end
   end
+
+  context "when not predictions are available" do
+    it "should return an empty array" do
+      route     = Muni::Route.find(38)
+      stop      = route.outbound.stops[-6]
+      
+      stop.predictions.should == []
+    end
+  end
+
 end
