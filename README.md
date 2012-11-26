@@ -46,3 +46,9 @@ Tasks:
   muni predict [ROUTE] [DIRECTION] [STOP]  # Retrieve predictions for a route at a specific stop
   muni show [ROUTE_TAG] [DIRECTION]        # Shows a specifc route by name
 ```
+
+Contributors
+============
+
+* [@jeffremer](https://github.com/jeffremer) (maintainer)
+* [@gregorym](https://github.com/gregorym)
