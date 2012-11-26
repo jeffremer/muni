@@ -15,5 +15,11 @@ describe Muni::Stop do
       route = Muni::Route.find("38")
       route.inbound.stops.first.predictions.should == []
    end
+
+   it 'should return an empty array if there is no direction or predictions' do
+      route = Muni::Route.find("38BX")
+      route.outbound.stops.first.predictions.should == []    
+   end
+
   end
 end
