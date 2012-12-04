@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Muni::Stop do
-  use_vcr_cassette
+  use_vcr_cassette "Muni_Route"
   context '#predictions' do
     it 'fetches predictions' do
       route = Muni::Route.find("38")
@@ -15,5 +15,12 @@ describe Muni::Stop do
       route = Muni::Route.find("38")
       route.inbound.stops.first.predictions.should == []
    end
+
+   it 'should return an empty array if there are no predictions' do
+      stop = Muni::Route.find("38").outbound.stops.first
+      Muni::Stop.stub(:send) { nil }
+      stop.predictions.should == []
+   end
+
   end
 end
