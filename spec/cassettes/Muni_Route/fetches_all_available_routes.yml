@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://webservices.nextbus.com/service/publicXMLFeed?a=sf-muni&command=routeList
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - webservices.nextbus.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 26 Mar 2013 19:41:23 GMT
+      Server:
+      - Apache/2.2.4 (Unix) mod_ssl/2.2.4 OpenSSL/0.9.7m DAV/2 mod_jk/1.2.30
+      Access-Control-Allow-Origin:
+      - '*'
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '1030'
+      Content-Type:
+      - text/xml
+      X-Pad:
+      - avoid browser bug
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\" ?> \n<body copyright=\"All
+        data copyright San Francisco Muni 2013.\">\n<route tag=\"F\" title=\"F-Market
+        &amp; Wharves\"/>\n<route tag=\"J\" title=\"J-Church\"/>\n<route tag=\"KT\"
+        title=\"KT-Ingleside/Third Street\"/>\n<route tag=\"L\" title=\"L-Taraval\"/>\n<route
+        tag=\"M\" title=\"M-Ocean View\"/>\n<route tag=\"N\" title=\"N-Judah\"/>\n<route
+        tag=\"NX\" title=\"NX-N Express\"/>\n<route tag=\"1\" title=\"1-California\"/>\n<route
+        tag=\"1AX\" title=\"1AX-California A Express\"/>\n<route tag=\"1BX\" title=\"1BX-California
+        B Express\"/>\n<route tag=\"2\" title=\"2-Clement\"/>\n<route tag=\"3\" title=\"3-Jackson\"/>\n<route
+        tag=\"5\" title=\"5-Fulton\"/>\n<route tag=\"6\" title=\"6-Parnassus\"/>\n<route
+        tag=\"8X\" title=\"8X-Bayshore Exp\"/>\n<route tag=\"8AX\" title=\"8AX-Bayshore
+        A Exp\"/>\n<route tag=\"8BX\" title=\"8BX-Bayshore B Exp\"/>\n<route tag=\"9\"
+        title=\"9-San Bruno\"/>\n<route tag=\"9L\" title=\"9L-San Bruno Limited\"/>\n<route
+        tag=\"10\" title=\"10-Townsend\"/>\n<route tag=\"12\" title=\"12-Folsom/Pacific\"/>\n<route
+        tag=\"14\" title=\"14-Mission\"/>\n<route tag=\"14L\" title=\"14L-Mission
+        Limited\"/>\n<route tag=\"14X\" title=\"14X-Mission Express\"/>\n<route tag=\"16X\"
+        title=\"16X-Noriega Express\"/>\n<route tag=\"17\" title=\"17-Park Merced\"/>\n<route
+        tag=\"18\" title=\"18-46th Avenue\"/>\n<route tag=\"19\" title=\"19-Polk\"/>\n<route
+        tag=\"21\" title=\"21-Hayes\"/>\n<route tag=\"22\" title=\"22-Fillmore\"/>\n<route
+        tag=\"23\" title=\"23-Monterey\"/>\n<route tag=\"24\" title=\"24-Divisadero\"/>\n<route
+        tag=\"27\" title=\"27-Bryant\"/>\n<route tag=\"28\" title=\"28-19th Avenue\"/>\n<route
+        tag=\"29\" title=\"29-Sunset\"/>\n<route tag=\"30\" title=\"30-Stockton\"/>\n<route
+        tag=\"30X\" title=\"30X-Marina Express\"/>\n<route tag=\"31\" title=\"31-Balboa\"/>\n<route
+        tag=\"31AX\" title=\"31AX-Balboa A Express\"/>\n<route tag=\"31BX\" title=\"31BX-Balboa
+        B Express\"/>\n<route tag=\"33\" title=\"33-Stanyan\"/>\n<route tag=\"35\"
+        title=\"35-Eureka\"/>\n<route tag=\"36\" title=\"36-Teresita\"/>\n<route tag=\"37\"
+        title=\"37-Corbett\"/>\n<route tag=\"38\" title=\"38-Geary\"/>\n<route tag=\"38AX\"
+        title=\"38AX-Geary A Express\"/>\n<route tag=\"38BX\" title=\"38BX-Geary B
+        Express\"/>\n<route tag=\"38L\" title=\"38L-Geary Limited\"/>\n<route tag=\"39\"
+        title=\"39-Coit\"/>\n<route tag=\"41\" title=\"41-Union\"/>\n<route tag=\"43\"
+        title=\"43-Masonic\"/>\n<route tag=\"44\" title=\"44-O&apos;Shaughnessy\"/>\n<route
+        tag=\"45\" title=\"45-Union/Stockton\"/>\n<route tag=\"47\" title=\"47-Van
+        Ness\"/>\n<route tag=\"48\" title=\"48-Quintara - 24th Street\"/>\n<route
+        tag=\"49\" title=\"49-Mission-Van Ness\"/>\n<route tag=\"52\" title=\"52-Excelsior\"/>\n<route
+        tag=\"54\" title=\"54-Felton\"/>\n<route tag=\"56\" title=\"56-Rutland\"/>\n<route
+        tag=\"66\" title=\"66-Quintara\"/>\n<route tag=\"67\" title=\"67-Bernal Heights\"/>\n<route
+        tag=\"71\" title=\"71-Haight-Noriega\"/>\n<route tag=\"71L\" title=\"71L-Haight-Noriega
+        Limited\"/>\n<route tag=\"76\" title=\"76-Marin Headlands\"/>\n<route tag=\"81X\"
+        title=\"81X-Caltrain Express\"/>\n<route tag=\"82X\" title=\"82X-Levi Plaza
+        Express\"/>\n<route tag=\"83X\" title=\"83X-Caltrain\"/>\n<route tag=\"88\"
+        title=\"88-B.A.R.T. Shuttle\"/>\n<route tag=\"90\" title=\"90-San Bruno Owl\"/>\n<route
+        tag=\"91\" title=\"91-Owl\"/>\n<route tag=\"108\" title=\"108-Treasure Island\"/>\n<route
+        tag=\"K OWL\" title=\"K-Owl\"/>\n<route tag=\"L OWL\" title=\"L-Owl\"/>\n<route
+        tag=\"M OWL\" title=\"M-Owl\"/>\n<route tag=\"N OWL\" title=\"N-Owl\"/>\n<route
+        tag=\"T OWL\" title=\"T-Owl\"/>\n<route tag=\"59\" title=\"Powell/Mason Cable
+        Car\"/>\n<route tag=\"60\" title=\"Powell/Hyde Cable Car\"/>\n<route tag=\"61\"
+        title=\"California Cable Car\"/>\n</body>\n"
+    http_version: 
+  recorded_at: Tue, 26 Mar 2013 19:41:23 GMT
+recorded_with: VCR 2.4.0

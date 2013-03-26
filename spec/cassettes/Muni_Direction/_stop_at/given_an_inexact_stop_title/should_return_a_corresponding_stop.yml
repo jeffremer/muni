@@ -1,0 +1,430 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://webservices.nextbus.com/service/publicXMLFeed?a=sf-muni&command=routeConfig&r=2424
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - webservices.nextbus.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 26 Mar 2013 19:47:39 GMT
+      Server:
+      - Apache/2.2.4 (Unix) mod_ssl/2.2.4 OpenSSL/0.9.7m DAV/2 mod_jk/1.2.30
+      Access-Control-Allow-Origin:
+      - '*'
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '202'
+      Content-Type:
+      - text/xml
+      X-Pad:
+      - avoid browser bug
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\" ?> \n<body copyright=\"All
+        data copyright San Francisco Muni 2013.\">\n<Error shouldRetry=\"false\">\n
+        \ Could not get route \"2424\" for agency tag \"sf-muni\". \nOne of the tags
+        could be bad.\n</Error>\n</body>\n"
+    http_version: 
+  recorded_at: Tue, 26 Mar 2013 19:47:39 GMT
+- request:
+    method: get
+    uri: http://webservices.nextbus.com/service/publicXMLFeed?a=sf-muni&command=routeConfig&r=24
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - webservices.nextbus.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 26 Mar 2013 19:47:56 GMT
+      Server:
+      - Apache/2.2.4 (Unix) mod_ssl/2.2.4 OpenSSL/0.9.7m DAV/2 mod_jk/1.2.30
+      Access-Control-Allow-Origin:
+      - '*'
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '4048'
+      Content-Type:
+      - text/xml
+      X-Pad:
+      - avoid browser bug
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\" ?> \n<body copyright=\"All
+        data copyright San Francisco Muni 2013.\">\n<route tag=\"24\" title=\"24-Divisadero\"
+        color=\"996699\" oppositeColor=\"000000\" latMin=\"37.7340899\" latMax=\"37.7927199\"
+        lonMin=\"-122.44108\" lonMax=\"-122.39093\">\n<stop tag=\"3541\" title=\"30th
+        St &amp; Mission St\" lat=\"37.7423099\" lon=\"-122.42217\" stopId=\"13541\"/>\n<stop
+        tag=\"4157\" title=\"Cortland Ave &amp; Mission St\" lat=\"37.74085\" lon=\"-122.42251\"
+        stopId=\"14157\"/>\n<stop tag=\"4161\" title=\"Cortland Ave &amp; Prospect
+        Ave\" lat=\"37.7402\" lon=\"-122.42093\" stopId=\"14161\"/>\n<stop tag=\"4150\"
+        title=\"Cortland Ave &amp; Elsie St\" lat=\"37.7397\" lon=\"-122.41969\" stopId=\"14150\"/>\n<stop
+        tag=\"4146\" title=\"Cortland Ave &amp; Bocana St\" lat=\"37.7393099\" lon=\"-122.4187199\"
+        stopId=\"14146\"/>\n<stop tag=\"4143\" title=\"Cortland Ave &amp; Andover
+        St\" lat=\"37.7390399\" lon=\"-122.4165799\" stopId=\"14143\"/>\n<stop tag=\"4152\"
+        title=\"Cortland Ave &amp; Ellsworth St\" lat=\"37.73883\" lon=\"-122.41461\"
+        stopId=\"14152\"/>\n<stop tag=\"4154\" title=\"Cortland Ave &amp; Folsom St\"
+        lat=\"37.73892\" lon=\"-122.4134299\" stopId=\"14154\"/>\n<stop tag=\"4159\"
+        title=\"Cortland Ave &amp; Prentiss St\" lat=\"37.7395699\" lon=\"-122.41211\"
+        stopId=\"14159\"/>\n<stop tag=\"7213\" title=\"Cortland Ave &amp; Bronte St\"
+        lat=\"37.7397099\" lon=\"-122.4101699\" stopId=\"17213\"/>\n<stop tag=\"4148\"
+        title=\"Cortland Ave &amp; Bayshore Blvd\" lat=\"37.7395399\" lon=\"-122.4072\"
+        stopId=\"14148\"/>\n<stop tag=\"5093\" title=\"Industrial St &amp; Bayshore
+        Blvd\" lat=\"37.73794\" lon=\"-122.4067799\" stopId=\"15093\"/>\n<stop tag=\"5094\"
+        title=\"Industrial St &amp; Elmira St\" lat=\"37.73879\" lon=\"-122.4037299\"
+        stopId=\"15094\"/>\n<stop tag=\"5095\" title=\"Industrial St &amp; Palou Ave\"
+        lat=\"37.73955\" lon=\"-122.4010099\" stopId=\"15095\"/>\n<stop tag=\"5884\"
+        title=\"Palou Ave &amp; Rankin St\" lat=\"37.73825\" lon=\"-122.39853\" stopId=\"15884\"/>\n<stop
+        tag=\"5882\" title=\"Palou Ave &amp; Quint St\" lat=\"37.73722\" lon=\"-122.39672\"
+        stopId=\"15882\"/>\n<stop tag=\"5880\" title=\"Palou Ave &amp; Phelps St\"
+        lat=\"37.7360999\" lon=\"-122.3948099\" stopId=\"15880\"/>\n<stop tag=\"5878\"
+        title=\"Palou Ave &amp; Newhall St\" lat=\"37.7350299\" lon=\"-122.3926599\"
+        stopId=\"15878\"/>\n<stop tag=\"33141\" title=\"3rd St &amp; Palou Ave\" lat=\"37.7340899\"
+        lon=\"-122.39093\" stopId=\"133141\"/>\n<stop tag=\"5167\" title=\"Jackson
+        St &amp; Webster St\" lat=\"37.7927199\" lon=\"-122.43302\" stopId=\"15167\"/>\n<stop
+        tag=\"5147\" title=\"Jackson St &amp; Fillmore St\" lat=\"37.7925299\" lon=\"-122.43468\"
+        stopId=\"15147\"/>\n<stop tag=\"5162\" title=\"Jackson St &amp; Steiner St\"
+        lat=\"37.7923499\" lon=\"-122.43611\" stopId=\"15162\"/>\n<stop tag=\"5160\"
+        title=\"Jackson St &amp; Scott St\" lat=\"37.7919299\" lon=\"-122.43924\"
+        stopId=\"15160\"/>\n<stop tag=\"5145\" title=\"Jackson St &amp; Divisadero
+        St\" lat=\"37.79172\" lon=\"-122.4408899\" stopId=\"15145\"/>\n<stop tag=\"4413\"
+        title=\"Divisadero St &amp; Clay St\" lat=\"37.7899699\" lon=\"-122.4408899\"
+        stopId=\"14413\"/>\n<stop tag=\"4410\" title=\"Divisadero St &amp; California
+        St\" lat=\"37.7879899\" lon=\"-122.4404999\" stopId=\"14410\"/>\n<stop tag=\"4433\"
+        title=\"Divisadero St &amp; Pine St\" lat=\"37.7869999\" lon=\"-122.4403199\"
+        stopId=\"14433\"/>\n<stop tag=\"4435\" title=\"Divisadero St &amp; Sutter
+        St\" lat=\"37.7851499\" lon=\"-122.43994\" stopId=\"14435\"/>\n<stop tag=\"4422\"
+        title=\"Divisadero St &amp; Geary Blvd\" lat=\"37.78316\" lon=\"-122.43953\"
+        stopId=\"14422\"/>\n<stop tag=\"4415\" title=\"Divisadero St &amp; Eddy St\"
+        lat=\"37.7804499\" lon=\"-122.43898\" stopId=\"14415\"/>\n<stop tag=\"4429\"
+        title=\"Divisadero St &amp; McAllister St\" lat=\"37.77768\" lon=\"-122.43841\"
+        stopId=\"14429\"/>\n<stop tag=\"4426\" title=\"Divisadero St &amp; Hayes St\"
+        lat=\"37.77489\" lon=\"-122.43786\" stopId=\"14426\"/>\n<stop tag=\"4432\"
+        title=\"Divisadero St &amp; Oak St\" lat=\"37.77305\" lon=\"-122.43749\" stopId=\"14432\"/>\n<stop
+        tag=\"4424\" title=\"Divisadero St &amp; Haight St\" lat=\"37.7710499\" lon=\"-122.4371\"
+        stopId=\"14424\"/>\n<stop tag=\"4330\" title=\"Castro St &amp; Duboce Ave\"
+        lat=\"37.76918\" lon=\"-122.4359599\" stopId=\"14330\"/>\n<stop tag=\"4308\"
+        title=\"Castro St &amp; 14th St\" lat=\"37.7674199\" lon=\"-122.4357099\"
+        stopId=\"14308\"/>\n<stop tag=\"4309\" title=\"Castro St &amp; 15th St\" lat=\"37.76583\"
+        lon=\"-122.43557\" stopId=\"14309\"/>\n<stop tag=\"4312\" title=\"Castro St
+        &amp; 16th St\" lat=\"37.76427\" lon=\"-122.43544\" stopId=\"14312\"/>\n<stop
+        tag=\"4334\" title=\"Castro St &amp; Market St\" lat=\"37.76214\" lon=\"-122.43519\"
+        stopId=\"14334\"/>\n<stop tag=\"4315\" title=\"Castro St &amp; 18th St\" lat=\"37.7607499\"
+        lon=\"-122.43507\" stopId=\"14315\"/>\n<stop tag=\"4316\" title=\"Castro St
+        &amp; 19th St\" lat=\"37.75939\" lon=\"-122.43491\" stopId=\"14316\"/>\n<stop
+        tag=\"4318\" title=\"Castro St &amp; 20th St\" lat=\"37.75778\" lon=\"-122.43477\"
+        stopId=\"14318\"/>\n<stop tag=\"4321\" title=\"Castro St &amp; 21st St\" lat=\"37.7560999\"
+        lon=\"-122.4346199\" stopId=\"14321\"/>\n<stop tag=\"4322\" title=\"Castro
+        St &amp; 22nd St\" lat=\"37.75464\" lon=\"-122.43448\" stopId=\"14322\"/>\n<stop
+        tag=\"4325\" title=\"Castro St &amp; 23rd St\" lat=\"37.7528999\" lon=\"-122.4343199\"
+        stopId=\"14325\"/>\n<stop tag=\"4333\" title=\"Castro St &amp; Elizabeth St\"
+        lat=\"37.7520799\" lon=\"-122.4342499\" stopId=\"14333\"/>\n<stop tag=\"4327\"
+        title=\"Castro St &amp; 24th St\" lat=\"37.7512499\" lon=\"-122.43418\" stopId=\"14327\"/>\n<stop
+        tag=\"4328\" title=\"Castro St &amp; 25th St\" lat=\"37.74981\" lon=\"-122.43404\"
+        stopId=\"14328\"/>\n<stop tag=\"7290\" title=\"Castro St &amp; 26th St\" lat=\"37.7481999\"
+        lon=\"-122.4338899\" stopId=\"17290\"/>\n<stop tag=\"3521\" title=\"26th St
+        &amp; Noe St\" lat=\"37.74817\" lon=\"-122.4316399\" stopId=\"13521\"/>\n<stop
+        tag=\"5732\" title=\"Noe St &amp; 27th St\" lat=\"37.7466799\" lon=\"-122.4314799\"
+        stopId=\"15732\"/>\n<stop tag=\"5734\" title=\"Noe St &amp; 28th St\" lat=\"37.74519\"
+        lon=\"-122.43134\" stopId=\"15734\"/>\n<stop tag=\"5736\" title=\"Noe St &amp;
+        29th St\" lat=\"37.74354\" lon=\"-122.43117\" stopId=\"15736\"/>\n<stop tag=\"5738\"
+        title=\"Noe St &amp; 30th St\" lat=\"37.74201\" lon=\"-122.43101\" stopId=\"15738\"/>\n<stop
+        tag=\"3544\" title=\"30th St &amp; Sanchez St\" lat=\"37.7419099\" lon=\"-122.42902\"
+        stopId=\"13544\"/>\n<stop tag=\"3536\" title=\"30th St &amp; Church St\" lat=\"37.7420399\"
+        lon=\"-122.42676\" stopId=\"13536\"/>\n<stop tag=\"3538\" title=\"30th St
+        &amp; Dolores St\" lat=\"37.7421699\" lon=\"-122.42446\" stopId=\"13538\"/>\n<stop
+        tag=\"34148\" title=\"Cortland Ave &amp; Bayshore Blvd\" lat=\"37.7395399\"
+        lon=\"-122.4072\" stopId=\"134148\"/>\n<stop tag=\"4314\" title=\"Castro St
+        &amp; 18th St\" lat=\"37.7608399\" lon=\"-122.43493\" stopId=\"14314\"/>\n<stop
+        tag=\"4313\" title=\"Castro St &amp; 17th St\" lat=\"37.76237\" lon=\"-122.43508\"
+        stopId=\"14313\"/>\n<stop tag=\"4311\" title=\"Castro St &amp; 16th St\" lat=\"37.76416\"
+        lon=\"-122.43525\" stopId=\"14311\"/>\n<stop tag=\"4310\" title=\"Castro St
+        &amp; 15th St\" lat=\"37.7656099\" lon=\"-122.4353799\" stopId=\"14310\"/>\n<stop
+        tag=\"4307\" title=\"Castro St &amp; 14th St\" lat=\"37.76761\" lon=\"-122.43558\"
+        stopId=\"14307\"/>\n<stop tag=\"4331\" title=\"Castro St &amp; Duboce Ave\"
+        lat=\"37.76895\" lon=\"-122.43571\" stopId=\"14331\"/>\n<stop tag=\"4423\"
+        title=\"Divisadero St &amp; Haight St\" lat=\"37.7713299\" lon=\"-122.43698\"
+        stopId=\"14423\"/>\n<stop tag=\"4431\" title=\"Divisadero St &amp; Oak St\"
+        lat=\"37.77319\" lon=\"-122.43735\" stopId=\"14431\"/>\n<stop tag=\"4425\"
+        title=\"Divisadero St &amp; Hayes St\" lat=\"37.77506\" lon=\"-122.43774\"
+        stopId=\"14425\"/>\n<stop tag=\"4428\" title=\"Divisadero St &amp; McAllister
+        St\" lat=\"37.7778599\" lon=\"-122.4382999\" stopId=\"14428\"/>\n<stop tag=\"4414\"
+        title=\"Divisadero St &amp; Eddy St\" lat=\"37.7804999\" lon=\"-122.43881\"
+        stopId=\"14414\"/>\n<stop tag=\"4421\" title=\"Divisadero St &amp; Geary Blvd\"
+        lat=\"37.78338\" lon=\"-122.43941\" stopId=\"14421\"/>\n<stop tag=\"4434\"
+        title=\"Divisadero St &amp; Sutter St\" lat=\"37.7853399\" lon=\"-122.43981\"
+        stopId=\"14434\"/>\n<stop tag=\"4408\" title=\"Divisadero St &amp; Bush St\"
+        lat=\"37.78628\" lon=\"-122.44\" stopId=\"14408\"/>\n<stop tag=\"4409\" title=\"Divisadero
+        St &amp; California St\" lat=\"37.7881799\" lon=\"-122.4403799\" stopId=\"14409\"/>\n<stop
+        tag=\"4412\" title=\"Divisadero St &amp; Clay St\" lat=\"37.7899799\" lon=\"-122.4407399\"
+        stopId=\"14412\"/>\n<stop tag=\"4427\" title=\"Divisadero St &amp; Jackson
+        St\" lat=\"37.79154\" lon=\"-122.44108\" stopId=\"14427\"/>\n<stop tag=\"5161\"
+        title=\"Jackson St &amp; Scott St\" lat=\"37.7917699\" lon=\"-122.43961\"
+        stopId=\"15161\"/>\n<stop tag=\"5163\" title=\"Jackson St &amp; Steiner St\"
+        lat=\"37.7921999\" lon=\"-122.43632\" stopId=\"15163\"/>\n<stop tag=\"4624\"
+        title=\"Fillmore St &amp; Jackson St\" lat=\"37.7923899\" lon=\"-122.4346099\"
+        stopId=\"14624\"/>\n<stop tag=\"6931\" title=\"Washington St &amp; Webster
+        St\" lat=\"37.7917199\" lon=\"-122.43284\" stopId=\"16931\"/>\n<stop tag=\"35167\"
+        title=\"Jackson St &amp; Webster St\" lat=\"37.7927199\" lon=\"-122.43302\"
+        stopId=\"135167\"/>\n<stop tag=\"3141\" title=\"3rd St &amp; Palou Ave\" lat=\"37.7340899\"
+        lon=\"-122.39093\" stopId=\"13141\"/>\n<stop tag=\"5490\" title=\"Newcomb
+        Ave &amp; Newhall St\" lat=\"37.7362999\" lon=\"-122.3915199\" stopId=\"15490\"/>\n<stop
+        tag=\"5491\" title=\"Newhall St &amp; Oakdale Ave\" lat=\"37.7357999\" lon=\"-122.39217\"
+        stopId=\"15491\"/>\n<stop tag=\"5492\" title=\"Newhall St &amp; Palou Ave\"
+        lat=\"37.73517\" lon=\"-122.3927399\" stopId=\"15492\"/>\n<stop tag=\"5879\"
+        title=\"Palou Ave &amp; Phelps St\" lat=\"37.7360999\" lon=\"-122.3945299\"
+        stopId=\"15879\"/>\n<stop tag=\"5881\" title=\"Palou Ave &amp; Quint St\"
+        lat=\"37.7371599\" lon=\"-122.3963699\" stopId=\"15881\"/>\n<stop tag=\"5883\"
+        title=\"Palou Ave &amp; Rankin St\" lat=\"37.73821\" lon=\"-122.39824\" stopId=\"15883\"/>\n<stop
+        tag=\"5867\" title=\"Palou Ave &amp; Industrial St\" lat=\"37.7395299\" lon=\"-122.4005499\"
+        stopId=\"15867\"/>\n<stop tag=\"5096\" title=\"Industrial St &amp; Revere
+        Ave\" lat=\"37.73913\" lon=\"-122.4030499\" stopId=\"15096\"/>\n<stop tag=\"5092\"
+        title=\"Industrial St &amp; Bayshore Blvd\" lat=\"37.7381499\" lon=\"-122.40654\"
+        stopId=\"15092\"/>\n<stop tag=\"4155\" title=\"Cortland Ave &amp; Hilton St\"
+        lat=\"37.7396899\" lon=\"-122.40781\" stopId=\"14155\"/>\n<stop tag=\"4147\"
+        title=\"Cortland Ave &amp; Bradford St\" lat=\"37.7397899\" lon=\"-122.4097499\"
+        stopId=\"14147\"/>\n<stop tag=\"4158\" title=\"Cortland Ave &amp; Prentiss
+        St\" lat=\"37.7397799\" lon=\"-122.41199\" stopId=\"14158\"/>\n<stop tag=\"4153\"
+        title=\"Cortland Ave &amp; Folsom St\" lat=\"37.739\" lon=\"-122.4136599\"
+        stopId=\"14153\"/>\n<stop tag=\"4151\" title=\"Cortland Ave &amp; Ellsworth
+        St\" lat=\"37.7389199\" lon=\"-122.41455\" stopId=\"14151\"/>\n<stop tag=\"4142\"
+        title=\"Cortland Ave &amp; Andover St\" lat=\"37.7390899\" lon=\"-122.4163899\"
+        stopId=\"14142\"/>\n<stop tag=\"4145\" title=\"Cortland Ave &amp; Bocana St\"
+        lat=\"37.7393\" lon=\"-122.41846\" stopId=\"14145\"/>\n<stop tag=\"4149\"
+        title=\"Cortland Ave &amp; Elsie St\" lat=\"37.73992\" lon=\"-122.41997\"
+        stopId=\"14149\"/>\n<stop tag=\"4160\" title=\"Cortland Ave &amp; Prospect
+        Ave\" lat=\"37.74029\" lon=\"-122.4209\" stopId=\"14160\"/>\n<stop tag=\"4156\"
+        title=\"Cortland Ave &amp; Mission St\" lat=\"37.7410099\" lon=\"-122.4226699\"
+        stopId=\"14156\"/>\n<stop tag=\"3540\" title=\"30th St &amp; Mission St\"
+        lat=\"37.7424399\" lon=\"-122.42206\" stopId=\"13540\"/>\n<stop tag=\"3537\"
+        title=\"30th St &amp; Dolores St\" lat=\"37.7423\" lon=\"-122.4240299\" stopId=\"13537\"/>\n<stop
+        tag=\"3535\" title=\"30th St &amp; Church St\" lat=\"37.74216\" lon=\"-122.4263699\"
+        stopId=\"13535\"/>\n<stop tag=\"3543\" title=\"30th St &amp; Sanchez St\"
+        lat=\"37.7420199\" lon=\"-122.4286\" stopId=\"13543\"/>\n<stop tag=\"3542\"
+        title=\"30th St &amp; Noe St\" lat=\"37.7418799\" lon=\"-122.43079\" stopId=\"13542\"/>\n<stop
+        tag=\"5737\" title=\"Noe St &amp; 29th St\" lat=\"37.7433\" lon=\"-122.43104\"
+        stopId=\"15737\"/>\n<stop tag=\"5735\" title=\"Noe St &amp; 28th St\" lat=\"37.7449299\"
+        lon=\"-122.4311699\" stopId=\"15735\"/>\n<stop tag=\"5733\" title=\"Noe St
+        &amp; 27th St\" lat=\"37.7465399\" lon=\"-122.4313199\" stopId=\"15733\"/>\n<stop
+        tag=\"3520\" title=\"26th St &amp; Noe St\" lat=\"37.7482699\" lon=\"-122.43177\"
+        stopId=\"13520\"/>\n<stop tag=\"3514\" title=\"26th St &amp; Castro St\" lat=\"37.74815\"
+        lon=\"-122.4336299\" stopId=\"13514\"/>\n<stop tag=\"4329\" title=\"Castro
+        St &amp; 25th St\" lat=\"37.7495999\" lon=\"-122.4338299\" stopId=\"14329\"/>\n<stop
+        tag=\"4326\" title=\"Castro St &amp; 24th St\" lat=\"37.7511999\" lon=\"-122.43401\"
+        stopId=\"14326\"/>\n<stop tag=\"4332\" title=\"Castro St &amp; Elizabeth St\"
+        lat=\"37.75189\" lon=\"-122.43405\" stopId=\"14332\"/>\n<stop tag=\"4324\"
+        title=\"Castro St &amp; 23rd St\" lat=\"37.75278\" lon=\"-122.43416\" stopId=\"14324\"/>\n<stop
+        tag=\"4323\" title=\"Castro St &amp; 22nd St\" lat=\"37.75441\" lon=\"-122.43431\"
+        stopId=\"14323\"/>\n<stop tag=\"4320\" title=\"Castro St &amp; 21st St\" lat=\"37.7559599\"
+        lon=\"-122.4344599\" stopId=\"14320\"/>\n<stop tag=\"4319\" title=\"Castro
+        St &amp; 20th St\" lat=\"37.7576299\" lon=\"-122.4346399\" stopId=\"14319\"/>\n<stop
+        tag=\"4317\" title=\"Castro St &amp; 19th St\" lat=\"37.7591599\" lon=\"-122.4347899\"
+        stopId=\"14317\"/>\n<stop tag=\"34435\" title=\"Divisadero St &amp; Sutter
+        St\" lat=\"37.7851499\" lon=\"-122.43994\" stopId=\"134435\"/>\n<stop tag=\"14148\"
+        title=\"Cortland Ave &amp; Bayshore Blvd\" lat=\"37.7395399\" lon=\"-122.4072\"
+        stopId=\"114148\"/>\n<direction tag=\"24_OB3\" title=\"Outbound to the Bayview
+        District\" name=\"Outbound\" useForUI=\"true\">\n  <stop tag=\"5167\" />\n
+        \ <stop tag=\"5147\" />\n  <stop tag=\"5162\" />\n  <stop tag=\"5160\" />\n
+        \ <stop tag=\"5145\" />\n  <stop tag=\"4413\" />\n  <stop tag=\"4410\" />\n
+        \ <stop tag=\"4433\" />\n  <stop tag=\"4435\" />\n  <stop tag=\"4422\" />\n
+        \ <stop tag=\"4415\" />\n  <stop tag=\"4429\" />\n  <stop tag=\"4426\" />\n
+        \ <stop tag=\"4432\" />\n  <stop tag=\"4424\" />\n  <stop tag=\"4330\" />\n
+        \ <stop tag=\"4308\" />\n  <stop tag=\"4309\" />\n  <stop tag=\"4312\" />\n
+        \ <stop tag=\"4334\" />\n  <stop tag=\"4315\" />\n  <stop tag=\"4316\" />\n
+        \ <stop tag=\"4318\" />\n  <stop tag=\"4321\" />\n  <stop tag=\"4322\" />\n
+        \ <stop tag=\"4325\" />\n  <stop tag=\"4333\" />\n  <stop tag=\"4327\" />\n
+        \ <stop tag=\"4328\" />\n  <stop tag=\"7290\" />\n  <stop tag=\"3521\" />\n
+        \ <stop tag=\"5732\" />\n  <stop tag=\"5734\" />\n  <stop tag=\"5736\" />\n
+        \ <stop tag=\"5738\" />\n  <stop tag=\"3544\" />\n  <stop tag=\"3536\" />\n
+        \ <stop tag=\"3538\" />\n  <stop tag=\"3541\" />\n  <stop tag=\"4157\" />\n
+        \ <stop tag=\"4161\" />\n  <stop tag=\"4150\" />\n  <stop tag=\"4146\" />\n
+        \ <stop tag=\"4143\" />\n  <stop tag=\"4152\" />\n  <stop tag=\"4154\" />\n
+        \ <stop tag=\"4159\" />\n  <stop tag=\"7213\" />\n  <stop tag=\"4148\" />\n
+        \ <stop tag=\"5093\" />\n  <stop tag=\"5094\" />\n  <stop tag=\"5095\" />\n
+        \ <stop tag=\"5884\" />\n  <stop tag=\"5882\" />\n  <stop tag=\"5880\" />\n
+        \ <stop tag=\"5878\" />\n  <stop tag=\"33141\" />\n</direction>\n<direction
+        tag=\"24_IB1\" title=\"Inbound to Pacific Heights\" name=\"Inbound\" useForUI=\"true\">\n
+        \ <stop tag=\"3141\" />\n  <stop tag=\"5490\" />\n  <stop tag=\"5491\" />\n
+        \ <stop tag=\"5492\" />\n  <stop tag=\"5879\" />\n  <stop tag=\"5881\" />\n
+        \ <stop tag=\"5883\" />\n  <stop tag=\"5867\" />\n  <stop tag=\"5096\" />\n
+        \ <stop tag=\"5092\" />\n  <stop tag=\"4155\" />\n  <stop tag=\"4147\" />\n
+        \ <stop tag=\"4158\" />\n  <stop tag=\"4153\" />\n  <stop tag=\"4151\" />\n
+        \ <stop tag=\"4142\" />\n  <stop tag=\"4145\" />\n  <stop tag=\"4149\" />\n
+        \ <stop tag=\"4160\" />\n  <stop tag=\"4156\" />\n  <stop tag=\"3540\" />\n
+        \ <stop tag=\"3537\" />\n  <stop tag=\"3535\" />\n  <stop tag=\"3543\" />\n
+        \ <stop tag=\"3542\" />\n  <stop tag=\"5737\" />\n  <stop tag=\"5735\" />\n
+        \ <stop tag=\"5733\" />\n  <stop tag=\"3520\" />\n  <stop tag=\"3514\" />\n
+        \ <stop tag=\"4329\" />\n  <stop tag=\"4326\" />\n  <stop tag=\"4332\" />\n
+        \ <stop tag=\"4324\" />\n  <stop tag=\"4323\" />\n  <stop tag=\"4320\" />\n
+        \ <stop tag=\"4319\" />\n  <stop tag=\"4317\" />\n  <stop tag=\"4314\" />\n
+        \ <stop tag=\"4313\" />\n  <stop tag=\"4311\" />\n  <stop tag=\"4310\" />\n
+        \ <stop tag=\"4307\" />\n  <stop tag=\"4331\" />\n  <stop tag=\"4423\" />\n
+        \ <stop tag=\"4431\" />\n  <stop tag=\"4425\" />\n  <stop tag=\"4428\" />\n
+        \ <stop tag=\"4414\" />\n  <stop tag=\"4421\" />\n  <stop tag=\"4434\" />\n
+        \ <stop tag=\"4408\" />\n  <stop tag=\"4409\" />\n  <stop tag=\"4412\" />\n
+        \ <stop tag=\"4427\" />\n  <stop tag=\"5161\" />\n  <stop tag=\"5163\" />\n
+        \ <stop tag=\"4624\" />\n  <stop tag=\"6931\" />\n  <stop tag=\"35167\" />\n</direction>\n<path>\n<point
+        lat=\"37.7805\" lon=\"-122.43881\"/>\n<point lat=\"37.78515\" lon=\"-122.43994\"/>\n</path>\n<path>\n<point
+        lat=\"37.77105\" lon=\"-122.4371\"/>\n<point lat=\"37.77034\" lon=\"-122.43686\"/>\n<point
+        lat=\"37.76996\" lon=\"-122.43632\"/>\n<point lat=\"37.76975\" lon=\"-122.4362\"/>\n<point
+        lat=\"37.76938\" lon=\"-122.43592\"/>\n<point lat=\"37.76918\" lon=\"-122.43596\"/>\n<point
+        lat=\"37.76906\" lon=\"-122.4358\"/>\n<point lat=\"37.76742\" lon=\"-122.43571\"/>\n<point
+        lat=\"37.76583\" lon=\"-122.43557\"/>\n<point lat=\"37.76427\" lon=\"-122.43544\"/>\n<point
+        lat=\"37.76214\" lon=\"-122.43519\"/>\n<point lat=\"37.76075\" lon=\"-122.43507\"/>\n</path>\n<path>\n<point
+        lat=\"37.74231\" lon=\"-122.42217\"/>\n<point lat=\"37.74103\" lon=\"-122.42285\"/>\n<point
+        lat=\"37.74085\" lon=\"-122.42251\"/>\n<point lat=\"37.7402\" lon=\"-122.42093\"/>\n<point
+        lat=\"37.7397\" lon=\"-122.41969\"/>\n<point lat=\"37.73931\" lon=\"-122.41872\"/>\n<point
+        lat=\"37.7393\" lon=\"-122.41859\"/>\n<point lat=\"37.73904\" lon=\"-122.41658\"/>\n<point
+        lat=\"37.73888\" lon=\"-122.41467\"/>\n<point lat=\"37.73883\" lon=\"-122.41461\"/>\n<point
+        lat=\"37.73892\" lon=\"-122.41343\"/>\n<point lat=\"37.73897\" lon=\"-122.41341\"/>\n<point
+        lat=\"37.73931\" lon=\"-122.41267\"/>\n<point lat=\"37.73957\" lon=\"-122.41211\"/>\n<point
+        lat=\"37.7398499\" lon=\"-122.41175\"/>\n<point lat=\"37.73971\" lon=\"-122.41017\"/>\n<point
+        lat=\"37.73954\" lon=\"-122.4072\"/>\n</path>\n<path>\n<point lat=\"37.73954\"
+        lon=\"-122.4072\"/>\n<point lat=\"37.73907\" lon=\"-122.40712\"/>\n<point
+        lat=\"37.7388199\" lon=\"-122.40726\"/>\n<point lat=\"37.73888\" lon=\"-122.40755\"/>\n<point
+        lat=\"37.73934\" lon=\"-122.40766\"/>\n<point lat=\"37.73961\" lon=\"-122.40765\"/>\n<point
+        lat=\"37.73969\" lon=\"-122.40781\"/>\n</path>\n<path>\n<point lat=\"37.7805\"
+        lon=\"-122.43881\"/>\n<point lat=\"37.78338\" lon=\"-122.43941\"/>\n<point
+        lat=\"37.78534\" lon=\"-122.43981\"/>\n</path>\n<path>\n<point lat=\"37.73969\"
+        lon=\"-122.40781\"/>\n<point lat=\"37.73979\" lon=\"-122.40975\"/>\n<point
+        lat=\"37.7398499\" lon=\"-122.41175\"/>\n<point lat=\"37.73978\" lon=\"-122.41199\"/>\n<point
+        lat=\"37.739\" lon=\"-122.41319\"/>\n<point lat=\"37.739\" lon=\"-122.41366\"/>\n<point
+        lat=\"37.73892\" lon=\"-122.41455\"/>\n<point lat=\"37.73888\" lon=\"-122.41457\"/>\n<point
+        lat=\"37.73909\" lon=\"-122.41639\"/>\n<point lat=\"37.73925\" lon=\"-122.41846\"/>\n<point
+        lat=\"37.7393\" lon=\"-122.41846\"/>\n<point lat=\"37.73992\" lon=\"-122.41997\"/>\n<point
+        lat=\"37.74029\" lon=\"-122.4209\"/>\n<point lat=\"37.74101\" lon=\"-122.42267\"/>\n<point
+        lat=\"37.74103\" lon=\"-122.42285\"/>\n<point lat=\"37.74244\" lon=\"-122.42206\"/>\n</path>\n<path>\n<point
+        lat=\"37.74244\" lon=\"-122.42206\"/>\n<point lat=\"37.7423\" lon=\"-122.42329\"/>\n<point
+        lat=\"37.7423\" lon=\"-122.42403\"/>\n<point lat=\"37.74216\" lon=\"-122.42637\"/>\n<point
+        lat=\"37.7420199\" lon=\"-122.4286\"/>\n<point lat=\"37.74188\" lon=\"-122.43079\"/>\n<point
+        lat=\"37.74184\" lon=\"-122.43089\"/>\n<point lat=\"37.7433\" lon=\"-122.43104\"/>\n<point
+        lat=\"37.7449299\" lon=\"-122.43117\"/>\n<point lat=\"37.74654\" lon=\"-122.43132\"/>\n<point
+        lat=\"37.74814\" lon=\"-122.43154\"/>\n<point lat=\"37.74827\" lon=\"-122.43177\"/>\n<point
+        lat=\"37.74815\" lon=\"-122.43363\"/>\n<point lat=\"37.7481\" lon=\"-122.43378\"/>\n<point
+        lat=\"37.7496\" lon=\"-122.43383\"/>\n<point lat=\"37.7512\" lon=\"-122.43401\"/>\n</path>\n<path>\n<point
+        lat=\"37.76075\" lon=\"-122.43507\"/>\n<point lat=\"37.75939\" lon=\"-122.43491\"/>\n<point
+        lat=\"37.7577799\" lon=\"-122.43477\"/>\n<point lat=\"37.7561\" lon=\"-122.43462\"/>\n<point
+        lat=\"37.75464\" lon=\"-122.43448\"/>\n<point lat=\"37.7528999\" lon=\"-122.43432\"/>\n<point
+        lat=\"37.75208\" lon=\"-122.43425\"/>\n<point lat=\"37.75125\" lon=\"-122.43418\"/>\n</path>\n<path>\n<point
+        lat=\"37.73409\" lon=\"-122.39093\"/>\n<point lat=\"37.73559\" lon=\"-122.39042\"/>\n<point
+        lat=\"37.7363\" lon=\"-122.39152\"/>\n<point lat=\"37.7363\" lon=\"-122.39165\"/>\n<point
+        lat=\"37.7358\" lon=\"-122.39217\"/>\n<point lat=\"37.7351699\" lon=\"-122.39274\"/>\n<point
+        lat=\"37.73504\" lon=\"-122.39278\"/>\n<point lat=\"37.7361\" lon=\"-122.39453\"/>\n<point
+        lat=\"37.73716\" lon=\"-122.39637\"/>\n<point lat=\"37.73821\" lon=\"-122.39824\"/>\n<point
+        lat=\"37.73953\" lon=\"-122.40055\"/>\n<point lat=\"37.73966\" lon=\"-122.4009\"/>\n<point
+        lat=\"37.73913\" lon=\"-122.40305\"/>\n<point lat=\"37.73815\" lon=\"-122.40654\"/>\n<point
+        lat=\"37.73797\" lon=\"-122.40692\"/>\n<point lat=\"37.73846\" lon=\"-122.40707\"/>\n<point
+        lat=\"37.73907\" lon=\"-122.40712\"/>\n<point lat=\"37.73932\" lon=\"-122.40708\"/>\n<point
+        lat=\"37.73957\" lon=\"-122.40698\"/>\n<point lat=\"37.73969\" lon=\"-122.40781\"/>\n</path>\n<path>\n<point
+        lat=\"37.77133\" lon=\"-122.43698\"/>\n<point lat=\"37.77319\" lon=\"-122.43735\"/>\n<point
+        lat=\"37.77506\" lon=\"-122.43774\"/>\n<point lat=\"37.7778599\" lon=\"-122.4383\"/>\n<point
+        lat=\"37.7805\" lon=\"-122.43881\"/>\n</path>\n<path>\n<point lat=\"37.78534\"
+        lon=\"-122.43981\"/>\n<point lat=\"37.78628\" lon=\"-122.44\"/>\n<point lat=\"37.7881799\"
+        lon=\"-122.44038\"/>\n<point lat=\"37.78998\" lon=\"-122.44074\"/>\n<point
+        lat=\"37.79154\" lon=\"-122.44108\"/>\n<point lat=\"37.79163\" lon=\"-122.44116\"/>\n<point
+        lat=\"37.79177\" lon=\"-122.43961\"/>\n<point lat=\"37.7922\" lon=\"-122.43632\"/>\n<point
+        lat=\"37.79247\" lon=\"-122.43456\"/>\n<point lat=\"37.79239\" lon=\"-122.43461\"/>\n<point
+        lat=\"37.79158\" lon=\"-122.43439\"/>\n<point lat=\"37.79172\" lon=\"-122.43284\"/>\n<point
+        lat=\"37.7918\" lon=\"-122.43275\"/>\n<point lat=\"37.79267\" lon=\"-122.43292\"/>\n<point
+        lat=\"37.79272\" lon=\"-122.43302\"/>\n</path>\n<path>\n<point lat=\"37.76084\"
+        lon=\"-122.43493\"/>\n<point lat=\"37.76237\" lon=\"-122.43508\"/>\n<point
+        lat=\"37.7641599\" lon=\"-122.43525\"/>\n<point lat=\"37.76561\" lon=\"-122.43538\"/>\n<point
+        lat=\"37.76761\" lon=\"-122.43558\"/>\n<point lat=\"37.7689499\" lon=\"-122.43571\"/>\n<point
+        lat=\"37.76906\" lon=\"-122.4358\"/>\n<point lat=\"37.76938\" lon=\"-122.43592\"/>\n<point
+        lat=\"37.76975\" lon=\"-122.4362\"/>\n<point lat=\"37.76996\" lon=\"-122.43632\"/>\n<point
+        lat=\"37.77029\" lon=\"-122.43678\"/>\n<point lat=\"37.77133\" lon=\"-122.43698\"/>\n</path>\n<path>\n<point
+        lat=\"37.73954\" lon=\"-122.4072\"/>\n<point lat=\"37.73957\" lon=\"-122.40698\"/>\n<point
+        lat=\"37.73932\" lon=\"-122.40708\"/>\n<point lat=\"37.73907\" lon=\"-122.40712\"/>\n<point
+        lat=\"37.7381\" lon=\"-122.40701\"/>\n<point lat=\"37.73794\" lon=\"-122.40678\"/>\n<point
+        lat=\"37.73833\" lon=\"-122.40566\"/>\n<point lat=\"37.73879\" lon=\"-122.40373\"/>\n<point
+        lat=\"37.73955\" lon=\"-122.40101\"/>\n<point lat=\"37.73966\" lon=\"-122.4009\"/>\n<point
+        lat=\"37.73825\" lon=\"-122.39853\"/>\n<point lat=\"37.73722\" lon=\"-122.39672\"/>\n<point
+        lat=\"37.7361\" lon=\"-122.39481\"/>\n<point lat=\"37.73503\" lon=\"-122.39266\"/>\n<point
+        lat=\"37.73409\" lon=\"-122.39093\"/>\n</path>\n<path>\n<point lat=\"37.78045\"
+        lon=\"-122.43898\"/>\n<point lat=\"37.7776799\" lon=\"-122.43841\"/>\n<point
+        lat=\"37.77489\" lon=\"-122.43786\"/>\n<point lat=\"37.77305\" lon=\"-122.43749\"/>\n<point
+        lat=\"37.77105\" lon=\"-122.4371\"/>\n</path>\n<path>\n<point lat=\"37.78515\"
+        lon=\"-122.43994\"/>\n<point lat=\"37.78316\" lon=\"-122.43953\"/>\n<point
+        lat=\"37.78045\" lon=\"-122.43898\"/>\n</path>\n<path>\n<point lat=\"37.75125\"
+        lon=\"-122.43418\"/>\n<point lat=\"37.7498099\" lon=\"-122.43404\"/>\n<point
+        lat=\"37.7482\" lon=\"-122.43389\"/>\n<point lat=\"37.7481\" lon=\"-122.43378\"/>\n<point
+        lat=\"37.74817\" lon=\"-122.43164\"/>\n<point lat=\"37.74823\" lon=\"-122.43157\"/>\n<point
+        lat=\"37.74668\" lon=\"-122.43148\"/>\n<point lat=\"37.74519\" lon=\"-122.43134\"/>\n<point
+        lat=\"37.74354\" lon=\"-122.43117\"/>\n<point lat=\"37.74201\" lon=\"-122.43101\"/>\n<point
+        lat=\"37.74192\" lon=\"-122.43096\"/>\n<point lat=\"37.74189\" lon=\"-122.42995\"/>\n<point
+        lat=\"37.74191\" lon=\"-122.42902\"/>\n<point lat=\"37.74204\" lon=\"-122.42676\"/>\n<point
+        lat=\"37.74217\" lon=\"-122.42446\"/>\n<point lat=\"37.74231\" lon=\"-122.42217\"/>\n</path>\n<path>\n<point
+        lat=\"37.73969\" lon=\"-122.40781\"/>\n<point lat=\"37.73979\" lon=\"-122.40975\"/>\n<point
+        lat=\"37.7398499\" lon=\"-122.41175\"/>\n<point lat=\"37.73978\" lon=\"-122.41199\"/>\n<point
+        lat=\"37.739\" lon=\"-122.41319\"/>\n<point lat=\"37.739\" lon=\"-122.41366\"/>\n<point
+        lat=\"37.73892\" lon=\"-122.41455\"/>\n<point lat=\"37.73888\" lon=\"-122.41457\"/>\n<point
+        lat=\"37.73909\" lon=\"-122.41639\"/>\n<point lat=\"37.73925\" lon=\"-122.41846\"/>\n<point
+        lat=\"37.7393\" lon=\"-122.41846\"/>\n<point lat=\"37.73992\" lon=\"-122.41997\"/>\n<point
+        lat=\"37.74029\" lon=\"-122.4209\"/>\n<point lat=\"37.74101\" lon=\"-122.42267\"/>\n<point
+        lat=\"37.74103\" lon=\"-122.42285\"/>\n<point lat=\"37.7421999\" lon=\"-122.42209\"/>\n<point
+        lat=\"37.74244\" lon=\"-122.42206\"/>\n</path>\n<path>\n<point lat=\"37.7512\"
+        lon=\"-122.43401\"/>\n<point lat=\"37.75189\" lon=\"-122.43405\"/>\n<point
+        lat=\"37.75278\" lon=\"-122.43416\"/>\n<point lat=\"37.75441\" lon=\"-122.43431\"/>\n<point
+        lat=\"37.75596\" lon=\"-122.43446\"/>\n<point lat=\"37.75763\" lon=\"-122.43464\"/>\n<point
+        lat=\"37.75916\" lon=\"-122.43479\"/>\n<point lat=\"37.76084\" lon=\"-122.43493\"/>\n</path>\n<path>\n<point
+        lat=\"37.73409\" lon=\"-122.39093\"/>\n<point lat=\"37.73559\" lon=\"-122.39042\"/>\n<point
+        lat=\"37.7363\" lon=\"-122.39152\"/>\n<point lat=\"37.7363\" lon=\"-122.39165\"/>\n<point
+        lat=\"37.7358\" lon=\"-122.39217\"/>\n<point lat=\"37.7351699\" lon=\"-122.39274\"/>\n<point
+        lat=\"37.73504\" lon=\"-122.39278\"/>\n<point lat=\"37.73566\" lon=\"-122.39222\"/>\n<point
+        lat=\"37.73504\" lon=\"-122.39278\"/>\n<point lat=\"37.7361\" lon=\"-122.39453\"/>\n<point
+        lat=\"37.73716\" lon=\"-122.39637\"/>\n<point lat=\"37.73821\" lon=\"-122.39824\"/>\n<point
+        lat=\"37.73953\" lon=\"-122.40055\"/>\n<point lat=\"37.73966\" lon=\"-122.4009\"/>\n<point
+        lat=\"37.73913\" lon=\"-122.40305\"/>\n<point lat=\"37.73815\" lon=\"-122.40654\"/>\n<point
+        lat=\"37.73797\" lon=\"-122.40692\"/>\n<point lat=\"37.73846\" lon=\"-122.40707\"/>\n<point
+        lat=\"37.73907\" lon=\"-122.40712\"/>\n<point lat=\"37.73932\" lon=\"-122.40708\"/>\n<point
+        lat=\"37.73957\" lon=\"-122.40698\"/>\n<point lat=\"37.73969\" lon=\"-122.40781\"/>\n</path>\n<path>\n<point
+        lat=\"37.7805\" lon=\"-122.43881\"/>\n<point lat=\"37.78534\" lon=\"-122.43981\"/>\n</path>\n<path>\n<point
+        lat=\"37.74231\" lon=\"-122.42217\"/>\n<point lat=\"37.74238\" lon=\"-122.42198\"/>\n<point
+        lat=\"37.74103\" lon=\"-122.42285\"/>\n<point lat=\"37.74085\" lon=\"-122.42251\"/>\n<point
+        lat=\"37.7402\" lon=\"-122.42093\"/>\n<point lat=\"37.7397\" lon=\"-122.41969\"/>\n<point
+        lat=\"37.73931\" lon=\"-122.41872\"/>\n<point lat=\"37.7393\" lon=\"-122.41859\"/>\n<point
+        lat=\"37.73904\" lon=\"-122.41658\"/>\n<point lat=\"37.73888\" lon=\"-122.41467\"/>\n<point
+        lat=\"37.73883\" lon=\"-122.41461\"/>\n<point lat=\"37.73892\" lon=\"-122.41343\"/>\n<point
+        lat=\"37.73897\" lon=\"-122.41341\"/>\n<point lat=\"37.73931\" lon=\"-122.41267\"/>\n<point
+        lat=\"37.73957\" lon=\"-122.41211\"/>\n<point lat=\"37.7398499\" lon=\"-122.41175\"/>\n<point
+        lat=\"37.73971\" lon=\"-122.41017\"/>\n<point lat=\"37.73954\" lon=\"-122.4072\"/>\n</path>\n<path>\n<point
+        lat=\"37.79272\" lon=\"-122.43302\"/>\n<point lat=\"37.79253\" lon=\"-122.43468\"/>\n<point
+        lat=\"37.79235\" lon=\"-122.43611\"/>\n<point lat=\"37.79193\" lon=\"-122.43924\"/>\n<point
+        lat=\"37.79172\" lon=\"-122.44089\"/>\n<point lat=\"37.79163\" lon=\"-122.44116\"/>\n<point
+        lat=\"37.7899699\" lon=\"-122.44089\"/>\n<point lat=\"37.78799\" lon=\"-122.4405\"/>\n<point
+        lat=\"37.787\" lon=\"-122.44032\"/>\n<point lat=\"37.78515\" lon=\"-122.43994\"/>\n</path>\n<path>\n<point
+        lat=\"37.78534\" lon=\"-122.43981\"/>\n<point lat=\"37.78628\" lon=\"-122.44\"/>\n<point
+        lat=\"37.7881799\" lon=\"-122.44038\"/>\n<point lat=\"37.78998\" lon=\"-122.44074\"/>\n<point
+        lat=\"37.79154\" lon=\"-122.44108\"/>\n<point lat=\"37.79163\" lon=\"-122.44116\"/>\n<point
+        lat=\"37.79177\" lon=\"-122.43961\"/>\n<point lat=\"37.7922\" lon=\"-122.43632\"/>\n</path>\n</route>\n</body>\n"
+    http_version: 
+  recorded_at: Tue, 26 Mar 2013 19:47:57 GMT
+recorded_with: VCR 2.4.0

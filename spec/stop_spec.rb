@@ -1,7 +1,6 @@
 require 'spec_helper'
 
-describe Muni::Stop do
-  use_vcr_cassette "Muni_Route"
+describe Muni::Stop, vcr: true do
   context '#predictions' do
     it 'fetches predictions' do
       route = Muni::Route.find("38")

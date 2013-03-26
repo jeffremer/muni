@@ -1,26 +1,33 @@
 require 'spec_helper'
 
-describe Muni::Direction do
-  use_vcr_cassette "Muni_Route"
-
-  let(:route) { Muni::Route.find(21) }
+describe Muni::Direction, vcr: true do
+  let(:route) { Muni::Route.find(24) }
 
   context "#stop_at" do
-    context "given  a stop tag" do
+    context "given a stop tag" do
       it "should return the corresponding stop" do
-        stop = route.inbound.stop_at("36497")
+        stop = route.inbound.stop_at("3520")
 
         stop.should be_present
-        stop.title.should == "Steuart St & Mission St"
+        stop.title.should == "26th St & Noe St"
       end
     end
 
-    context "given a stop title" do
+    context "given an exact stop title" do
       it "should return corresponding stop" do
-        stop  = route.inbound.stop_at("Hayes St & Shrader St")
+        stop = route.inbound.stop_at("26th St & Noe St")
 
         stop.should be_present
-        stop.title.should == "Hayes St & Shrader St"
+        stop.title.should == "26th St & Noe St"
+      end
+    end
+
+    context "given an inexact stop title" do
+      it "should return a corresponding stop" do
+        stop = route.inbound.stop_at("26th & Noe")
+        stop.should be_present
+        stop.title.should == "26th St & Noe St"
+        stop.tag.should == "3520"
       end
     end
   end
