@@ -1,8 +1,6 @@
 require 'spec_helper'
 
-describe Muni::Route do
-  use_vcr_cassette
-
+describe Muni::Route, vcr: true do
   it "fetches all available routes" do
     routes = Muni::Route.find(:all)
     routes.should_not be_empty
