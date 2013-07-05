@@ -47,7 +47,7 @@ module Muni
               :tag => stop['tag'],
               :title => stop['title'],
               :lat => stop['lat'],
-              :lon => stop['lat'],
+              :lon => stop['lon'],
               :stopId => stop['lat'],
             })
             stops[st.tag] = st
