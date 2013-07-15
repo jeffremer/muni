@@ -52,3 +52,5 @@ Contributors
 
 * [@jeffremer](https://github.com/jeffremer) (maintainer)
 * [@gregorym](https://github.com/gregorym)
+* [@jameshwang](https://github.com/jameshwang)
+* [bf4](https://github.com/bf4)
