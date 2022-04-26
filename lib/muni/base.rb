@@ -15,7 +15,7 @@ module Muni
       end
 
       def build_url(command, options = {})
-        url = "http://webservices.nextbus.com/service/publicXMLFeed?command=#{command}&a=sf-muni"
+        url = "https://retro.umoiq.com/service/publicXMLFeed?command=#{command}&a=sf-muni"
         options.each { |key,value| url << "&#{key}=#{value}" }
         url
       end
